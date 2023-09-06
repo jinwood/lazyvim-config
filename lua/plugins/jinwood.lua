@@ -13,4 +13,17 @@ return {
       table.insert(opts.sources, nls.builtins.formatting.prettierd)
     end,
   },
+  {
+    "sigmasd/deno-nvim",
+  },
+  {
+    "nvim-neo-tree/neo-tree.nvim",
+    opts = {
+      filesystem = {
+        filtered_items = {
+          hide_dotfiles = false,
+        },
+      },
+    },
+  },
 }
