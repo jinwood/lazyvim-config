@@ -46,6 +46,7 @@
   "nvim-web-devicons": { "branch": "master", "commit": "ab899311f8ae00a47eae8e0879506cead8eb1561" },
   "persistence.nvim": { "branch": "main", "commit": "4b8051c01f696d8849a5cb8afa9767be8db16e40" },
   "plenary.nvim": { "branch": "master", "commit": "267282a9ce242bbb0c5dc31445b6d353bed978bb" },
+  "tailwindcss-colorizer-cmp.nvim": { "branch": "main", "commit": "bc25c56083939f274edcfe395c6ff7de23b67c50" },
   "telescope.nvim": { "branch": "master", "commit": "2d92125620417fbea82ec30303823e3cd69e90e8" },
   "tender.vim": { "branch": "master", "commit": "7746453a045eaa97dc413a7209268345f33f3243" },
   "todo-comments.nvim": { "branch": "main", "commit": "3094ead8edfa9040de2421deddec55d3762f64d1" },
