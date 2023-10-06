@@ -34,4 +34,11 @@ return {
       end, { expr = true })
     end,
   },
+  {
+    "prisma/vim-prisma",
+    ft = "prisma",
+    config = function()
+      vim.g.prisma_formatter = "prettier"
+    end,
+  },
 }
