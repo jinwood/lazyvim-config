@@ -7,7 +7,7 @@ return {
       },
     },
   },
-  {
+  --[[{
     "NvChad/nvim-colorizer.lua",
     config = function()
       require("colorizer").setup({
@@ -16,7 +16,7 @@ return {
         },
       })
     end,
-  },
+  },]]
   {
     "hrsh7th/nvim-cmp",
     dependencies = {
