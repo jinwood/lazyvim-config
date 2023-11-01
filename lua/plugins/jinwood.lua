@@ -1,5 +1,11 @@
 return {
   {
+    "LazyVim/LazyVim",
+    opts = {
+      colorscheme = "tokyonight",
+    },
+  },
+  {
     "williamboman/mason.nvim",
     opts = function(_, opts)
       table.insert(opts.ensure_installed, "prettierd")
@@ -31,6 +37,11 @@ return {
     end,
   },
   {
-    "morhetz/gruvbox",
+    "vim-scripts/gruvbox",
+    config = function()
+      vim.o.background = "dark"
+    end,
+    lazy = false,
+    priority = 1000,
   },
 }
