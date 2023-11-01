@@ -30,4 +30,7 @@ return {
       vim.g.prisma_formatter = "prettier"
     end,
   },
+  {
+    "morhetz/gruvbox",
+  },
 }
