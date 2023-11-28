@@ -1,5 +1,15 @@
 return {
   {
+    "nvim-neo-tree/neo-tree.nvim",
+    opts = {
+      filesystem = {
+        filtered_items = {
+          visible = true,
+        },
+      },
+    },
+  },
+  {
     "L3MON4D3/LuaSnip",
     keys = function()
       return {}
@@ -12,6 +22,7 @@ return {
       styles = {
         sidebars = "transparent",
         floats = "transparent",
+        cursor = "transparent",
       },
     },
   },
