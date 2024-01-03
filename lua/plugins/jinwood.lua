@@ -16,17 +16,6 @@ return {
     end,
   },
   {
-    "folke/tokyonight.nvim",
-    opts = {
-      transparent = true,
-      styles = {
-        sidebars = "transparent",
-        floats = "transparent",
-        cursor = "transparent",
-      },
-    },
-  },
-  {
     "Exafunction/codeium.vim",
     config = function()
       vim.keymap.set("i", "<C-g>", function()
@@ -36,9 +25,7 @@ return {
   },
   {
     "numToStr/Comment.nvim",
-    opts = {
-      -- add any options here
-    },
+    opts = {},
     lazy = false,
   },
 }
