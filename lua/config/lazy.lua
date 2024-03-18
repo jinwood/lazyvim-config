@@ -5,6 +5,7 @@ if not vim.loop.fs_stat(lazypath) then
   vim.fn.system({ "git", "clone", "--filter=blob:none", "https://github.com/folke/lazy.nvim.git", "--branch=stable", lazypath })
 end
 vim.opt.rtp:prepend(vim.env.LAZY or lazypath)
+vim.opt.swapfile = false
 
 require("lazy").setup({
   spec = {
@@ -24,7 +25,7 @@ require("lazy").setup({
     -- have outdated releases, which may break your Neovim install.
     version = false, -- always use the latest git commit
     -- version = "*", -- try installing the latest stable version for plugins that support semver
-    swapfile = false,
+    -- disable swapfiles
   },
   -- set colorscheme to rasmus
   checker = { enabled = true, notify = false }, -- automatically check for plugin updates

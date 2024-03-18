@@ -8,6 +8,16 @@ return {
         require("telescope").load_extension("fzf")
       end,
     },
+    opts = {
+      defaults = {
+        file_ignore_patterns = { "node_modules" },
+        path_display = { "smart" },
+        root_dirs = {
+          ".git",
+          "package.json",
+        },
+      },
+    },
   },
   {
     "nvim-neo-tree/neo-tree.nvim",
