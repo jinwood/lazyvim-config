@@ -72,3 +72,4 @@ require("lazy").setup({
     },
   },
 })
+vim.cmd("colorscheme no-clown-fiesta")
