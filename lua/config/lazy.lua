@@ -27,7 +27,6 @@ require("lazy").setup({
     -- version = "*", -- try installing the latest stable version for plugins that support semver
     -- disable swapfiles
   },
-  -- set colorscheme to rasmus
   checker = { enabled = true, notify = false }, -- automatically check for plugin updates
   performance = {
     rtp = {
@@ -72,4 +71,3 @@ require("lazy").setup({
     },
   },
 })
-vim.cmd("colorscheme no-clown-fiesta")
