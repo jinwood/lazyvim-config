@@ -1,6 +1,5 @@
 {
   "extras": [
-    "lazyvim.plugins.extras.coding.codeium",
     "lazyvim.plugins.extras.formatting.prettier",
     "lazyvim.plugins.extras.linting.eslint"
   ],
@@ -9,3 +8,4 @@
   },
   "version": 2
 }
+
