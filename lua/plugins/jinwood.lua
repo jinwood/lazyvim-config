@@ -1,13 +1,33 @@
 return {
   {
+    "LazyVim/LazyVim",
+    opts = {
+      colorscheme = "iceberg",
+    },
+  },
+  {
+    "cocopon/iceberg.vim",
+  },
+  {
+    "aktersnurra/no-clown-fiesta.nvim",
+    lazy = false,
+    priority = 1000,
+  },
+  {
     "telescope.nvim",
     dependencies = {
       "nvim-telescope/telescope-fzf-native.nvim",
       build = "make",
-      config = function()
-        require("telescope").load_extension("fzf")
-      end,
     },
+    config = function()
+      local telescope = require("telescope")
+      telescope.setup({
+        defaults = {
+          file_ignore_patterns = { "package%-lock%.json" },
+        },
+      })
+      telescope.load_extension("fzf")
+    end,
   },
   {
     "nvim-neo-tree/neo-tree.nvim",
