@@ -2,11 +2,8 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "iceberg",
+      colorscheme = "default",
     },
-  },
-  {
-    "cocopon/iceberg.vim",
   },
   {
     "aktersnurra/no-clown-fiesta.nvim",
