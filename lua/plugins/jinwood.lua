@@ -1,5 +1,8 @@
 return {
   {
+    "amadeus/vim-mjml",
+  },
+  {
     "LazyVim/LazyVim",
     opts = {
       colorscheme = "default",
