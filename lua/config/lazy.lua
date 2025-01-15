@@ -6,7 +6,6 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(vim.env.LAZY or lazypath)
 vim.opt.swapfile = false
-vim.g.snacks_animate = false
 
 require("lazy").setup({
   spec = {
@@ -14,7 +13,6 @@ require("lazy").setup({
     { import = "lazyvim.plugins.extras.lang.typescript" },
     { import = "lazyvim.plugins.extras.lang.json" },
     import = "lazyvim.plugins.extras.linting.eslint",
-    -- { import = "lazyvim.plugins.extras.ui.mini-animate" },
     { import = "plugins" },
   },
   defaults = {
