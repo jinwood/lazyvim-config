@@ -4,3 +4,8 @@
 vim.opt.conceallevel = 0 -- don't hide my json strings
 vim.g.root_spec = { "cwd" }
 vim.g.snacks_animate = false
+
+vim.g.terminal_env = {
+  PATH = vim.env.PATH,
+  NVM_DIR = vim.env.NVM_DIR,
+}

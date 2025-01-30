@@ -61,4 +61,17 @@ return {
       inlay_hints = { enabled = false },
     },
   },
+  {
+    "akinsho/toggleterm.nvim",
+    opts = {
+      size = 20,
+      open_mapping = [[<leader>t]],
+      direction = "horizontal",
+    },
+    version = "*",
+    shell = function()
+      -- This will first source nvm, then use the default version
+      return "source ~/.nvm/nvm.sh && nvm use default && " .. vim.o.shell
+    end,
+  },
 }
