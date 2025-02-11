@@ -5,18 +5,10 @@ return {
     config = true,
   },
   {
-    "amadeus/vim-mjml",
-  },
-  {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "no-clown-fiesta",
+      colorscheme = "default",
     },
-  },
-  {
-    "aktersnurra/no-clown-fiesta.nvim",
-    lazy = false,
-    priority = 1000,
   },
   {
     "telescope.nvim",
