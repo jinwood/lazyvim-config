@@ -53,4 +53,7 @@ return {
       inlay_hints = { enabled = false },
     },
   },
+  {
+    "jinwood/nvim-guid",
+  },
 }
