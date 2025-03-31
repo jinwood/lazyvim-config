@@ -8,10 +8,17 @@ return {
     "LazyVim/LazyVim",
     opts = {
       colorscheme = "default",
+      vim.api.nvim_create_autocmd("ColorScheme", {
+        callback = function()
+          -- Improve statusline contrast while keeping default colorscheme
+          vim.api.nvim_set_hl(0, "StatusLine", { fg = "#ffffff", bg = "#444444", bold = true })
+          vim.api.nvim_set_hl(0, "StatusLineNC", { fg = "#cccccc", bg = "#333333" })
+        end,
+      }),
     },
   },
   {
-    "telescope.nvim",
+    "nvim-telescope/telescope.nvim",
     dependencies = {
       "nvim-telescope/telescope-fzf-native.nvim",
       build = "make",
@@ -20,7 +27,7 @@ return {
       local telescope = require("telescope")
       telescope.setup({
         defaults = {
-          file_ignore_patterns = { "package%-lock%.json" },
+          file_ignore_patterns = { "package%-lock%.json", "node_modules" },
         },
       })
       telescope.load_extension("fzf")
@@ -55,5 +62,14 @@ return {
   },
   {
     "jinwood/nvim-guid",
+  },
+  {
+    "nvim-neotest/neotest",
+    dependencies = {
+      "nvim-neotest/nvim-nio",
+      "nvim-lua/plenary.nvim",
+      "antoinemadec/FixCursorHold.nvim",
+      "nvim-treesitter/nvim-treesitter",
+    },
   },
 }
