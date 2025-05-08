@@ -27,7 +27,7 @@ return {
       local telescope = require("telescope")
       telescope.setup({
         defaults = {
-          file_ignore_patterns = { "package%-lock%.json", "node_modules" },
+          file_ignore_patterns = { "package%-lock%.json", "node_modules", "yarn%.lock$" },
         },
       })
       telescope.load_extension("fzf")
