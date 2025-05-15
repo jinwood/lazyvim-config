@@ -27,7 +27,7 @@ return {
       local telescope = require("telescope")
       telescope.setup({
         defaults = {
-          file_ignore_patterns = { "package%-lock%.json", "node_modules", "yarn%.lock$" },
+          file_ignore_patterns = { "package%-lock%.json", "node_modules", "yarn%.lock$", "%.DS_Store" },
         },
       })
       telescope.load_extension("fzf")
@@ -39,6 +39,12 @@ return {
       filesystem = {
         filtered_items = {
           visible = true,
+          hide_by_name = {
+            ".DS_Store",
+          },
+          never_show = {
+            ".DS_Store",
+          },
         },
       },
     },
