@@ -7,7 +7,7 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "default",
+      colorscheme = "kanso",
       vim.api.nvim_create_autocmd("ColorScheme", {
         callback = function()
           -- Improve statusline contrast while keeping default colorscheme
@@ -70,12 +70,8 @@ return {
     "jinwood/nvim-guid",
   },
   {
-    "nvim-neotest/neotest",
-    dependencies = {
-      "nvim-neotest/nvim-nio",
-      "nvim-lua/plenary.nvim",
-      "antoinemadec/FixCursorHold.nvim",
-      "nvim-treesitter/nvim-treesitter",
-    },
+    "webhooked/kanso.nvim",
+    lazy = false,
+    priority = 1000,
   },
 }
