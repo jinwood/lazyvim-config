@@ -8,13 +8,13 @@ return {
     "LazyVim/LazyVim",
     opts = {
       colorscheme = "default",
-      -- vim.api.nvim_create_autocmd("ColorScheme", {
-      --   callback = function()
-      --     -- Improve statusline contrast while keeping default colorscheme
-      --     vim.api.nvim_set_hl(0, "StatusLine", { fg = "#ffffff", bg = "#444444", bold = true })
-      --     vim.api.nvim_set_hl(0, "StatusLineNC", { fg = "#cccccc", bg = "#333333" })
-      --   end,
-      -- }),
+      vim.api.nvim_create_autocmd("ColorScheme", {
+        callback = function()
+          -- Improve statusline contrast while keeping default colorscheme
+          vim.api.nvim_set_hl(0, "StatusLine", { fg = "#ffffff", bg = "#444444", bold = true })
+          vim.api.nvim_set_hl(0, "StatusLineNC", { fg = "#cccccc", bg = "#333333" })
+        end,
+      }),
     },
   },
   {
