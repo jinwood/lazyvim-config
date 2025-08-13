@@ -7,14 +7,24 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "kanso",
-      vim.api.nvim_create_autocmd("ColorScheme", {
-        callback = function()
-          -- Improve statusline contrast while keeping default colorscheme
-          vim.api.nvim_set_hl(0, "StatusLine", { fg = "#ffffff", bg = "#444444", bold = true })
-          vim.api.nvim_set_hl(0, "StatusLineNC", { fg = "#cccccc", bg = "#333333" })
-        end,
-      }),
+      colorscheme = "default",
+      -- vim.api.nvim_create_autocmd("ColorScheme", {
+      --   callback = function()
+      --     -- Improve statusline contrast while keeping default colorscheme
+      --     vim.api.nvim_set_hl(0, "StatusLine", { fg = "#ffffff", bg = "#444444", bold = true })
+      --     vim.api.nvim_set_hl(0, "StatusLineNC", { fg = "#cccccc", bg = "#333333" })
+      --   end,
+      -- }),
+    },
+  },
+  {
+    "stevearc/conform.nvim",
+    lazy = true,
+    opts = {
+      format_on_save = {
+        timeout_ms = 500,
+        lsp_fallback = true,
+      },
     },
   },
   {
@@ -73,5 +83,13 @@ return {
     "webhooked/kanso.nvim",
     lazy = false,
     priority = 1000,
+  },
+  {
+    "NLKNguyen/papercolor-theme",
+    lazy = false,
+    priority = 1000,
+  },
+  {
+    "iamcco/markdown-preview.nvim",
   },
 }

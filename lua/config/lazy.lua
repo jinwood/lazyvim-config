@@ -6,6 +6,7 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(vim.env.LAZY or lazypath)
 vim.opt.swapfile = false
+vim.opt.background = "dark"
 
 require("lazy").setup({
   spec = {
@@ -69,3 +70,5 @@ require("lazy").setup({
     },
   },
 })
+
+--vim.g.autoformat = false
