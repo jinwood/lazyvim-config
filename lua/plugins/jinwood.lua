@@ -1,5 +1,14 @@
 return {
   {
+    "KijitoraFinch/nanode.nvim",
+    priority = 1000,
+    config = function()
+      require("nanode").setup({
+        transparent = false,
+      })
+    end,
+  },
+  {
     "vhyrro/luarocks.nvim",
     priority = 1000, -- Very high priority is required, luarocks.nvim should run as the first plugin in your config.
     config = true,
@@ -7,7 +16,7 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "default",
+      colorscheme = "nanode",
       vim.api.nvim_create_autocmd("ColorScheme", {
         callback = function()
           -- Improve statusline contrast while keeping default colorscheme
@@ -19,8 +28,12 @@ return {
   },
   {
     "stevearc/conform.nvim",
-    lazy = true,
-    foo = false,
+    opts = {
+      format_on_save = {
+        timeout_ms = 500,
+        lsp_fallback = true,
+      },
+    },
   },
   {
     "nvim-telescope/telescope.nvim",
