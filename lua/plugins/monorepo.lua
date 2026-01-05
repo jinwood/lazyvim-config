@@ -4,20 +4,10 @@ local function is_monorepo()
   return apps_ok and packages_ok and apps_ok.type == "directory" and packages_ok.type == "directory"
 end
 
--- truncate long paths.
-local function truncate(str, max_len)
-  if str:len() > max_len then
-    local head_len = math.floor((max_len - 3) / 2)
-    local tail_len = max_len - 3 - head_len
-    return str:sub(1, head_len) .. "..." .. str:sub(str:len() - tail_len + 1)
-  end
-  return str
-end
-
 return {
   {
     "akinsho/bufferline.nvim",
-    enabled = is_monorepo,
+    enabled = is_monorepo(),
     opts = {
       options = {
         max_name_length = 20,
