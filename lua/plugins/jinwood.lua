@@ -1,17 +1,13 @@
 local util = require("lspconfig.util")
 
 return {
-  -- 1. LSP SETTINGS
   {
     "neovim/nvim-lspconfig",
     opts = {
       servers = {
-        -- 1. Disable the old vetur/vue_ls
         vue_ls = { enabled = false },
 
-        -- 2. Volar (Template/Style engine)
         volar = {
-          -- No need to hardcode root_dir unless you have a very specific monorepo setup
           init_options = {
             vue = {
               hybridMode = true,
@@ -19,9 +15,7 @@ return {
           },
         },
 
-        -- 3. Vtsls (The Brain)
         vtsls = {
-          -- Ensure vue is in the filetypes so the plugin actually triggers
           filetypes = { "javascript", "javascriptreact", "typescript", "typescriptreact", "vue" },
           settings = {
             vtsls = {
@@ -32,7 +26,6 @@ return {
                     globalPlugins = {
                       {
                         name = "@vue/typescript-plugin",
-                        -- This path is the most reliable way to point to the Mason install on Mac
                         location = vim.fn.stdpath("data")
                           .. "/mason/packages/vue-language-server/node_modules/@vue/language-server",
                         languages = { "vue" },
