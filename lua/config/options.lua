@@ -5,6 +5,7 @@ vim.opt.wildignore:append({ "**/DS_Store" })
 vim.opt.conceallevel = 0 -- don't hide my json strings
 vim.g.root_spec = { "cwd" }
 vim.g.snacks_animate = false
+vim.g.lazyvim_lsp_inlay_hints = false
 
 vim.g.terminal_env = {
   PATH = vim.env.PATH,
