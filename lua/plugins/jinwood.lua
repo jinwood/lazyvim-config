@@ -43,13 +43,11 @@ return {
     },
   },
 
-  -- 2. LINTING: Clear the manual setup to let the LSP handle it
   {
     "mfussenegger/nvim-lint",
     opts = { linters_by_ft = { javascript = {}, typescript = {}, vue = {} } },
   },
 
-  -- 3. THE REST OF YOUR PLUGINS
   { "akinsho/bufferline.nvim", opts = { options = { always_show_bufferline = true } } },
   {
     "KijitoraFinch/nanode.nvim",
@@ -63,11 +61,15 @@ return {
   { "stevearc/conform.nvim" },
   {
     "nvim-telescope/telescope.nvim",
-    dependencies = { { "nvim-telescope/telescope-fzf-native.nvim", build = "make" } },
-    config = function()
-      require("telescope").setup({ defaults = { file_ignore_patterns = { "node_modules", "%.DS_Store" } } })
-      require("telescope").load_extension("fzf")
+    opts = function(_, opts)
+      opts.defaults = vim.tbl_deep_extend("force", opts.defaults or {}, {
+        file_ignore_patterns = { "node_modules", "%.DS_Store" },
+      })
     end,
+    keys = {
+      { "<leader><leader>", "<cmd>Telescope find_files<cr>", desc = "Find Files (Root)" },
+      { "<leader>/", "<cmd>Telescope live_grep<cr>", desc = "Grep (Root)" },
+    },
   },
   { "nvim-neo-tree/neo-tree.nvim", opts = { filesystem = { filtered_items = { visible = true } } } },
   { "nvim-tree/nvim-web-devicons" },
